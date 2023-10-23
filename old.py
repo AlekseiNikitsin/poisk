@@ -1,2 +1,1 @@
-a = input("введите имя : ")
-print (a)
+print ("Alex")
