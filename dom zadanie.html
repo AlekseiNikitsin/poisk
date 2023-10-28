@@ -2,46 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>homework</title>
+    <style>
+        body {
+            background-color: grey;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin-top: 200px;
+        }
+
+        .div_h3 {
+            width: 300px;
+            height: 80px;
+            background-color: darkcyan;
+            border-radius: 40px;
+            border: aqua 3px solid;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .input_main {
+            width: 300px;
+            height: 150px;
+            background-color: cadetblue;
+            border-radius: 30px;
+            padding: 8px 0 0 0;
+        }
+
+        .input {
+            border-radius: 7px;
+            border: black 2px solid;
+        }
+        .button:hover{
+            background-color: red;
+            hov
+            width: 250px;
+            height: 40px;
+            background-color: darkgreen;
+            border-radius: 10px;
+            border: black 2px solid;
+            font-size: 20px;
+        }
+    </style>
 </head>
-<p style="margin-top:400px">
-    <body style = 'text-align: center' >
-<style>
-    body{background: aquamarine}
-    .class2{
-     border-radius: 20%;
-        background: forestgreen;
-        width: 400px;
-        height: 40px;
-        position: absolute; top: 25%; left: 50%;
-        transform: translate(-50%, -50%);"
-
+<body>
+<script>
+    window.onload = () => {
+        btn1.onclick = () => {
+            alert("Логин: " + inp_login.value + "\nПароль: " + inp_pass.value)
+        }
     }
-</style>
-<style>
-.class1{
-
-border-radius: 20%;
-        background: cadetblue;
-        width: 400px;
-        height: 155px;
-        position: absolute; top: 40%; left: 50%;
-        transform: translate(-50%, -50%);"
-
-}
-</style>
+</script>
 
 
-
-
-
-<div>
-<h2 class="class2">Пройдите авторизацию:</h2>
-</div>
-<div ip = 'div1' class="class1">
-<h4> Логин:<input></h4>
-<h4> Пароль:<input></h4>
-<button style="border-radius: 35%; width: 220px; height: 40px; background-color: blue; color: black;">Войти</button>
+<form>
+    <div class="div_h3">
+        <h2>Пройдите авторизацию:</h2>
     </div>
-</body></p>
+    <div>
+        <div class="input_main">
+            <p>Логин:<input class="input"></p>
+            <p>Пароль:<input class="input"></p>
+            <button class="button">Войти</button>
+        </div>
+    </div>
+</form>
+</body>
 </html>
