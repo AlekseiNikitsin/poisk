@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Валидация 1</title>
+
+</head>
+<body>
+<input id="inp">
+<input id="btn" type="button" value="Кнопка">
+<script>
+    btn.onclick = () => {
+        let i = inp.value
+        if (i.trim() === '') {
+            console.log("Поле обязательно к заполнению")
+        }
+        else if (parseInt(i, 10)) console.log(parseInt(i, 10) * parseInt(i, 10))
+        else {
+            console.log(i)
+        }
+    }
+</script>
+</body>
+</html>

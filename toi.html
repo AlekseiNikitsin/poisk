@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  </head>
+<body>
+  <input type="text" id="textInput" placeholder="Введите текст или число">
+  <button onclick="checkInput()">Ввод</button>
+
+  <script>
+      //функция для проверки введенного значения
+    function checkInput() {
+        //получаем элемент ввода по его индификатору
+      const inputElement = document.getElementById('textInput');
+      //получаем значение из поля ввода и удаляемлишние пробелы в начале и конце
+      const inputValue = inputElement.value.trim();
+
+      if (inputValue === '') {
+        console.log('Field is required.');
+      } else if (!isNaN(inputValue)) {
+        const number = parseFloat(inputValue);
+        console.log(`Square of ${number}: ${number * number}`);
+      } else {
+        console.log(`Entered text: ${inputValue}`);
+      }
+    }
+  </script>
+</body>
+</html>

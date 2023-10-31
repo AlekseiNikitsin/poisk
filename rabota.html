@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <style>
+    #result {
+      font-size: 20px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .error {
+      color: red;
+    }
+    .success {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <!-- Поля ввода для пароля и подтверждения пароля -->
+
+  <input type="text" id="password" >
+    <input type="text" id="confirmPassword">
+
+  <!-- Кнопка, при нажатии на которую будет выполнена проверка введенных значений -->
+  <button onclick="checkRegistration()">Проверить регистрацию</button>
+  <div id="result"></div>
+
+  <script>
+    // Функция для проверки введенных значений
+    function checkRegistration() {
+      // Получаем элементы ввода по их идентификаторам
+      const passwordInput = document.getElementById('password');
+      const confirmPasswordInput = document.getElementById('confirmPassword');
+
+      // Получаем значения из полей ввода
+      const password = passwordInput.value.trim();
+      const confirmPassword = confirmPasswordInput.value.trim();
+
+      // Получаем элемент результата
+      const resultElement = document.getElementById('result');
+
+      // Проверяем, совпадают ли введенные пароли
+      if (password === confirmPassword) {
+        // Если пароли совпадают, выводим успешное сообщение
+        resultElement.textContent = 'Регистрация пройдена';
+        resultElement.classList.remove('error');
+        resultElement.classList.add('success');
+      } else {
+        // Если пароли не совпадают, выводим сообщение об ошибке
+        resultElement.textContent = 'Ошибка: Пароли не совпадают';
+        resultElement.classList.remove('success');
+        resultElement.classList.add('error');
+      }
+    }
+  </script>
+</body>
+</html>
